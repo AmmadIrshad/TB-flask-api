@@ -4,7 +4,6 @@ from inference_sdk import InferenceHTTPClient
 from PIL import Image
 import os
 import uuid
-from dotenv import load_dotenv
 import logging
 
 # Initialize Flask app
@@ -18,10 +17,11 @@ logging.basicConfig(
 )
 
 # Initialize the TB detection model client
-load_dotenv()
+
 CLIENT = InferenceHTTPClient(
     api_url="https://detect.roboflow.com",
-    api_key=os.getenv("ROBOFLOW_API_KEY")  # Use environment variable for API key
+    api_key="weUzBKzyD6TYzQL04eBi"
+    #api_key=os.getenv("ROBOFLOW_API_KEY")  # Use environment variable for API key
 )
 
 # Temporary files directory
@@ -86,6 +86,6 @@ def not_found_error(error):
     return jsonify({"error": "Resource not found"}), 404
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
+    app.run()
 
 

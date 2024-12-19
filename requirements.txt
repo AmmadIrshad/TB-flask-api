@@ -1,5 +1,4 @@
 flask
-gunicorn
 Pillow
 inference_sdk
 python-dotenv
