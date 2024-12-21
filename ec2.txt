@@ -1,0 +1,11 @@
+#connect to ec2
+ssh -i "tb-flask-api.pem" ec2-user@51.21.34.113
+cd TB-flask-api
+source venv/bin/activate
+pip install -r requirements.txt
+
+
+
+
+#run on port 80
+sudo python application.py 
