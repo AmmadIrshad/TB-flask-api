@@ -20,7 +20,7 @@ logging.basicConfig(
 
 CLIENT = InferenceHTTPClient(
     api_url="https://detect.roboflow.com",
-    api_key="weUzBKzyD6TYzQL04eBi"
+    
     #api_key=os.getenv("ROBOFLOW_API_KEY")  # Use environment variable for API key
 )
 
